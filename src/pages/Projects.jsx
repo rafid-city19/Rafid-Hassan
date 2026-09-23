@@ -11,6 +11,11 @@ function Projects() {
       <Navbar />
 
       <main className="mx-auto max-w-7xl px-6 pb-24 pt-40 md:px-10">
+
+        {/* ========================================
+            PAGE HEADER
+        ======================================== */}
+
         <section className="max-w-4xl">
           <p className="font-mono-custom text-xs tracking-[0.2em] text-[#ff6542]">
             SELECTED WORK
@@ -30,6 +35,10 @@ function Projects() {
           </p>
         </section>
 
+        {/* ========================================
+            PROJECT GRID
+        ======================================== */}
+
         <section className="mt-24 grid gap-6 md:grid-cols-2">
           {projects.map((project, index) => (
             <motion.article
@@ -41,52 +50,88 @@ function Projects() {
                 duration: 0.5,
                 delay: index * 0.1,
               }}
-              className="group overflow-hidden border border-white/10 bg-[#101216] transition hover:-translate-y-1 hover:border-[#ff6542]/40"
+              className="group overflow-hidden border border-white/10 bg-[#101216] transition duration-500 hover:-translate-y-1 hover:border-[#ff6542]/40"
             >
-              <div className="flex h-72 items-start justify-between bg-[radial-gradient(circle_at_center,rgba(255,101,66,0.13),transparent_45%),#0c0d10] p-6">
-                <span className="font-mono-custom text-xs text-[#ff6542]">
+
+              {/* ========================================
+                  PROJECT IMAGE
+              ======================================== */}
+
+              <div className="relative h-72 overflow-hidden">
+
+                <img
+                  src={project.image}
+                  alt={`${project.title} project screenshot`}
+                  className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+
+                {/* Dark overlay */}
+                <div className="absolute inset-0 bg-black/45 transition duration-500 group-hover:bg-black/30" />
+
+                {/* Orange gradient */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,101,66,0.15),transparent_55%)]" />
+
+                {/* Project number */}
+                <span className="absolute left-6 top-6 z-10 font-mono-custom text-xs text-[#ff6542]">
                   {project.number}
                 </span>
 
-                <span className="text-2xl text-zinc-600 transition group-hover:text-[#ff6542]">
+                {/* Arrow */}
+                <span className="absolute right-6 top-5 z-10 text-2xl text-zinc-300 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-[#ff6542]">
                   ↗
                 </span>
+
               </div>
 
+              {/* ========================================
+                  PROJECT INFORMATION
+              ======================================== */}
+
               <div className="p-7">
+
+                {/* Category */}
                 <p className="font-mono-custom text-[10px] uppercase tracking-widest text-[#ff6542]">
                   {project.category}
                 </p>
 
-                <h2 className="mt-3 text-2xl font-bold">
+                {/* Title */}
+                <h2 className="mt-3 text-2xl font-bold transition duration-300 group-hover:text-[#ff6542]">
                   {project.title}
                 </h2>
 
+                {/* Description */}
                 <p className="mt-4 text-sm leading-7 text-zinc-500">
                   {project.description}
                 </p>
 
+                {/* Technologies */}
                 <div className="mt-6 flex flex-wrap gap-2">
                   {project.technologies.map((technology) => (
                     <span
                       key={technology}
-                      className="rounded-full border border-white/10 px-3 py-1.5 text-[10px] text-zinc-500"
+                      className="rounded-full border border-white/10 px-3 py-1.5 text-[10px] text-zinc-500 transition duration-300 group-hover:border-[#ff6542]/30 group-hover:text-zinc-400"
                     >
                       {technology}
                     </span>
                   ))}
                 </div>
+
               </div>
             </motion.article>
           ))}
         </section>
 
+        {/* ========================================
+            BACK HOME
+        ======================================== */}
+
         <Link
           to="/"
-          className="mt-16 inline-block text-sm font-semibold text-[#ff6542]"
+          className="mt-16 inline-block text-sm font-semibold text-[#ff6542] transition hover:text-white"
         >
           ← Back Home
         </Link>
+
       </main>
 
       <Footer />
