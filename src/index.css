@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+    font-family: "Space Grotesk", sans-serif;
+  background: #08090b;
+  color: #f5f5f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #08090b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #ff6542;
+  color: #08090b;
+}
+
+.font-mono-custom {
+  font-family: "DM Mono", monospace;
+}
