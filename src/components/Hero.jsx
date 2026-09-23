@@ -46,7 +46,7 @@ function Hero() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-[17vw] font-extrabold leading-[0.78] tracking-[-0.075em] sm:text-8xl md:text-[9rem] lg:text-[8rem] xl:text-[10rem]"
             >
-              Rafid
+              RAFID HASSAN
               <br />
 
               <span className="text-transparent [-webkit-text-stroke:1px_#f5f5f5]">
