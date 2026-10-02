@@ -7,6 +7,8 @@ export const projects = [
     description: "A simple QR code generator built with React.",
     technologies: ["React", "Vite", "Tailwind"],
     image: "/projects/qr-generator.png",
+    projectUrl: "YOUR_QR_GENERATOR_URL",
+    githubUrl: "YOUR_QR_GENERATOR_GITHUB_URL",
   },
 
   {
@@ -17,6 +19,8 @@ export const projects = [
     description: "A platform for reporting problems across Bangladesh.",
     technologies: ["React", "Vite", "Tailwind"],
     image: "/projects/oniyom.png",
+    projectUrl: "https://oniyom-nu.vercel.app",
+    githubUrl: "YOUR_ONIYOM_GITHUB_URL",
   },
 
   {
@@ -27,5 +31,7 @@ export const projects = [
     description: "A modern technology company website.",
     technologies: ["React", "Tailwind", "Framer Motion"],
     image: "/projects/rivon.png",
+    projectUrl: "YOUR_RIVON_URL",
+    githubUrl: "YOUR_RIVON_GITHUB_URL",
   },
 ];
